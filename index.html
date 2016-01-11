@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.min.js"></script>
+<script src="app.js"></script>
+  <meta charset="utf-8">
+  <title>Slider</title>
+</head>
+<body ng-controller="MainCtrl as main">
+
+    <div class="slide">
+      <h1>{{main.slide.title}}</h1>
+      <p>{{main.slide.content}}</p>
+    </div>    
+
+  
+  <button ng-click="main.changeSlide()">Next</button>
+  
+  <form ng-submit="main.addSlide()">
+    <input type="text" placeholder="title" ng-model="main.title"/>
+    <input type="text" placeholder="content" ng-model="main.content"/>
+    
+    <button value="submit" class="btn">Add Slide</button>
+  </form>
+</body>
+</html>
